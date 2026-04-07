@@ -17,7 +17,9 @@
             <a href="#">Tentang Kami</a>
             <a href="#">Tanya Jawab</a>
         </div>
-        <button class="btn-primary">DAFTAR SEKARANG</button>
+        <a href="URL_LINK_DAFTAR_KAMU_DISINI" target="_blank">
+            <button class="btn-primary">DAFTAR SEKARANG</button>
+        </a>
     </nav>
 
     <section class="hero">
@@ -27,7 +29,9 @@
             <span class="text-emerald-400">ANGKA</span> TERPERCAYA.
         </h1>
         <div class="mt-10">
-            <button class="btn-white">AKSES LINK PENDAFTARAN</button>
+            <a href="URL_LINK_DAFTAR_KAMU_DISINI" target="_blank">
+                <button class="btn-white">AKSES LINK PENDAFTARAN</button>
+            </a>
         </div>
     </section>
 
@@ -105,7 +109,6 @@
     </footer>
 
     <script>
-        // Fungsi untuk mendeteksi scroll dan memicu animasi
         const observerOptions = { threshold: 0.2 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -115,9 +118,8 @@
             });
         }, observerOptions);
 
-        // Targetkan semua card keunggulan dan faq
         document.querySelectorAll('.feature-card, .faq-item').forEach((el) => {
-            el.classList.add('reveal'); // Sembunyikan dulu
+            el.classList.add('reveal');
             observer.observe(el);
         });
     </script>
