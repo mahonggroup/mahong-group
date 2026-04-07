@@ -6,124 +6,65 @@
     <title>BOSANGKA - The Digital Leader 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #020617; }
-        .gradient-text {
-            background: linear-gradient(90deg, #10b981, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-white">
 
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="text-2xl font-black italic tracking-tighter">
+    <nav class="navbar">
+        <div class="logo">
             BOS<span class="text-emerald-400">ANGKA</span>
         </div>
-        <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-            <a href="#" class="hover:text-white transition">Beranda</a>
-            <a href="#" class="hover:text-white transition">Tentang Kami</a>
-            <a href="#" class="hover:text-white transition">Tanya Jawab</a>
+        <div class="nav-links">
+            <a href="#">Beranda</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Tanya Jawab</a>
         </div>
-        <button class="bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-2 px-6 rounded-full text-xs transition duration-300">
-            DAFTAR SEKARANG
-        </button>
+        <button class="btn-primary">DAFTAR SEKARANG</button>
     </nav>
 
-    <section class="text-center mt-20 px-4">
-        <div class="inline-block border border-emerald-900/50 bg-emerald-950/20 px-4 py-1 rounded-full text-[10px] tracking-[0.2em] text-emerald-400 font-bold mb-8">
-            THE DIGITAL LEADER 2026
-        </div>
-        <h1 class="text-5xl md:text-7xl font-black italic leading-tight uppercase">
+    <section class="hero">
+        <div class="badge">THE DIGITAL LEADER 2026</div>
+        <h1 class="hero-title">
             BOSANGKA: <span class="text-emerald-400">BOS</span><br>
             <span class="text-emerald-400">ANGKA</span> TERPERCAYA.
         </h1>
         <div class="mt-10">
-            <button class="bg-white hover:bg-gray-200 text-black font-bold py-4 px-10 rounded-xl transition duration-300">
-                AKSES LINK PENDAFTARAN
-            </button>
+            <button class="btn-white">AKSES LINK PENDAFTARAN</button>
         </div>
     </section>
 
-    <section class="max-w-5xl mx-auto mt-32 p-10 bg-slate-900/30 rounded-3xl border border-slate-800">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
-            <div>
-                <h2 class="text-3xl font-black italic uppercase mb-6">
+    <section class="about-container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">
                     TENTANG <span class="text-emerald-400">BOSANGKA.</span>
                 </h2>
-                <p class="text-gray-400 leading-relaxed italic">
+                <p class="quote">
                     "Bosangka hadir sebagai solusi atas ketidakstabilan akses digital. Kami membangun jembatan aman bagi komunitas Bos Angka di seluruh Indonesia dengan mengutamakan privasi dan kecepatan tanpa kompromi."
                 </p>
             </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 text-center">
-                    <div class="text-3xl font-bold">99.9%</div>
-                    <div class="text-[10px] text-gray-500 uppercase mt-2">Akses Lancar</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val">99.9%</div>
+                    <div class="stat-label">Akses Lancar</div>
                 </div>
-                <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 text-center">
-                    <div class="text-3xl font-bold uppercase">Fast</div>
-                    <div class="text-[10px] text-gray-500 uppercase mt-2">Server Load</div>
+                <div class="stat-card">
+                    <div class="stat-val uppercase">Fast</div>
+                    <div class="stat-label">Server Load</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto mt-32 px-4">
-        <div class="text-center mb-16">
-            <h3 class="text-emerald-400 font-bold tracking-widest text-xs uppercase mb-4">Why Bosangka?</h3>
-            <h2 class="text-3xl font-black italic uppercase">Keunggulan Mutlak <span class="text-emerald-400">Bos Angka</span> di Dunia Digital.</h2>
-        </div>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition duration-500">
-                <div class="text-emerald-400 mb-6">⚡</div>
-                <h4 class="font-black italic uppercase mb-4">Kecepatan Instan</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Kami menggunakan teknologi Tailwind CSS dan CDN Global untuk memastikan akses halaman Bosangka secepat kilat.</p>
-            </div>
-            <div class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition duration-500">
-                <div class="text-emerald-400 mb-6">🔒</div>
-                <h4 class="font-black italic uppercase mb-4">Privasi Terjaga</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Setiap jalur akses Bos Angka dienkripsi dengan SSL berlapis untuk menjamin keamanan identitas setiap member.</p>
-            </div>
-            <div class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/50 transition duration-500">
-                <div class="text-emerald-400 mb-6">🌐</div>
-                <h4 class="font-black italic uppercase mb-4">Link Anti-Blokir</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Sistem kami memonitor link secara otomatis untuk memastikan Anda selalu mendapatkan akses aktif ke Bosangka.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="max-w-4xl mx-auto mt-32 mb-40 px-4">
-        <h2 class="text-3xl font-black italic uppercase text-center mb-12">
-            TANYA JAWAB <span class="text-emerald-400">BOSANGKA</span>
-        </h2>
-        <div class="space-y-4">
-            <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl">
-                <h5 class="text-emerald-400 font-bold italic text-sm mb-2 uppercase">1. Apa tujuan dari website Bosangka ini?</h5>
-                <p class="text-gray-400 text-sm">Website ini adalah pusat informasi dan akses resmi untuk mendapatkan link pendaftaran Bosangka yang terjamin keamanan dan kecepatannya.</p>
-            </div>
-            <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl">
-                <h5 class="text-emerald-400 font-bold italic text-sm mb-2 uppercase">2. Bagaimana cara daftar di Bos Angka?</h5>
-                <p class="text-gray-400 text-sm">Cukup klik tombol "Daftar Sekarang" atau "Akses Link Pendaftaran" untuk langsung menuju form registrasi resmi Bosangka.</p>
-            </div>
-            <div class="bg-slate-900/40 border border-slate-800 p-6 rounded-2xl">
-                <h5 class="text-emerald-400 font-bold italic text-sm mb-2 uppercase">3. Apakah layanan Bosangka gratis?</h5>
-                <p class="text-gray-400 text-sm">Ya, akses informasi dan link pendaftaran yang kami sediakan sepenuhnya gratis untuk komunitas setia Bos Angka.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-black py-20 border-t border-emerald-900/20 text-center">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-3xl font-black italic tracking-tighter mb-4 uppercase">
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
                 BOS<span class="text-emerald-400">ANGKA</span>
             </div>
-            
-            <p class="text-emerald-400 font-bold italic tracking-[0.3em] text-[10px] uppercase mb-12">
+            <p class="footer-slogan">
                 Built for Domination, Not Participation.
             </p>
-            
-            <div class="flex items-center justify-center space-x-2 text-gray-600 font-bold tracking-widest text-[9px] uppercase">
+            <div class="footer-copyright">
                 <span> 2026 BOSANGKA (BOS ANGKA) OFFICIAL SITE</span>
             </div>
         </div>
