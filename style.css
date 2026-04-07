@@ -76,3 +76,43 @@ body {
 .footer-logo { font-size: 1.875rem; font-weight: 900; font-style: italic; text-transform: uppercase; margin-bottom: 1rem; }
 .footer-slogan { color: #34d399; font-weight: 700; font-style: italic; letter-spacing: 0.3em; font-size: 10px; text-transform: uppercase; margin-bottom: 3rem; }
 .footer-copyright { color: #4b5563; font-weight: 700; letter-spacing: 0.1em; font-size: 9px; text-transform: uppercase; }
+
+/* --- ANIMASI REVEAL SAAT SCROLL --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- ANIMASI BLINK (KEDIP GLOW) --- */
+@keyframes glowBlink {
+    0% { border-color: #1e293b; box-shadow: 0 0 0px rgba(16, 185, 129, 0); }
+    50% { border-color: #10b981; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
+    100% { border-color: #1e293b; box-shadow: 0 0 0px rgba(16, 185, 129, 0); }
+}
+
+/* Terapkan Blink ke Keunggulan & FAQ */
+.feature-card, .faq-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek blink aktif saat elemen muncul di layar */
+.reveal.show {
+    animation: glowBlink 2s infinite alternate;
+    animation-delay: 0.5s; /* Mulai setelah reveal selesai */
+}
+
+/* Tambahan: Efek hover agar lebih interaktif */
+.feature-card:hover, .faq-item:hover {
+    border-color: #34d399 !important;
+    transform: scale(1.02) !important;
+    background-color: rgba(16, 185, 129, 0.05) !important;
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.2) !important;
+    transition: 0.3s;
+}
