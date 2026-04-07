@@ -104,5 +104,23 @@
         </div>
     </footer>
 
+    <script>
+        // Fungsi untuk mendeteksi scroll dan memicu animasi
+        const observerOptions = { threshold: 0.2 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
+
+        // Targetkan semua card keunggulan dan faq
+        document.querySelectorAll('.feature-card, .faq-item').forEach((el) => {
+            el.classList.add('reveal'); // Sembunyikan dulu
+            observer.observe(el);
+        });
+    </script>
+
 </body>
 </html>
