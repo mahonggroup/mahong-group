@@ -1,216 +1,77 @@
 /* --- ROOT & GLOBAL --- */
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #020617;
-    color: #f1f5f9;
-    margin: 0;
-    overflow-x: hidden;
-}
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f1f5f9; margin: 0; overflow-x: hidden; }
 
 /* --- GRADIENTS --- */
-.emerald-gradient {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+.emerald-gradient { background: linear-gradient(135deg, #10b981 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-/* --- NAVBAR --- */
-.nav-glass {
-    background: rgba(2, 6, 23, 0.9);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(16, 185, 129, 0.1);
-}
+/* --- NAVBAR & NAV LINKS (RESPONSIVE) --- */
+.nav-glass { background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(16, 185, 129, 0.1); }
 
-/* --- HERO SECTION --- */
-.hero-container {
-    max-width: 80rem; /* max-w-5xl */
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 12rem;
-    padding-bottom: 5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    text-align: center;
-}
-
-.hero-title {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    line-height: 1.1;
-    letter-spacing: -0.05em;
-}
-
-.glow-effect {
-    position: absolute;
-    top: 5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 400px;
-    background: rgba(16, 185, 129, 0.1);
-    border-radius: 50%;
-    filter: blur(100px);
-    z-index: -10;
-}
-
-/* --- CARDS & BOXES --- */
-.about-card-wrapper {
-    background: rgba(15, 23, 42, 0.4);
-    border-radius: 40px;
-    padding: 2.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-}
-
-.card-botak-style {
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(16, 185, 129, 0.1);
-    border-radius: 24px;
-    transition: 0.3s;
-}
-
-.card-botak-style:hover {
-    border-color: rgba(16, 185, 129, 0.4);
-    transform: translateY(-5px);
-}
-
-/* --- STAT CARDS (image_ae8edf.png) --- */
-.stat-card-botak {
-    background: rgba(15, 23, 42, 0.6);
-    padding: 2rem;
-    text-align: center;
-    border-radius: 24px;
-    border: 1px solid rgba(16, 185, 129, 0.1);
-}
-
-.stat-highlight {
-    border: 2px solid #10b981 !important;
-}
-
-/* --- CHECKLIST STYLE --- */
-.check-item {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* --- BUTTONS --- */
-.btn-primary-custom {
-    background-color: #10b981;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    border-radius: 9999px;
+.nav-links {
+    display: none; /* SEMBUNYI DI MOBILE (DEFAULT) */
+    gap: 2rem;
     font-size: 10px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
-    color: white;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.3em;
+}
+
+.nav-links a {
+    color: #94a3b8; /* slate-400 */
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
-.btn-primary-custom:hover {
-    transform: scale(1.05);
+.nav-links a:hover {
+    color: #10b981; /* emerald-500 */
 }
 
-.btn-white-custom {
-    background-color: white;
-    color: black;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    border-radius: 1rem;
-    font-weight: 900;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    transition: all 0.3s;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    width: 100%;
-}
-
-@media (min-width: 768px) {
-    .btn-white-custom {
-        width: auto;
+/* --- TAMPILKAN MENU HANYA DI DESKTOP --- */
+@media (min-width: 1024px) {
+    .nav-links {
+        display: flex; /* MUNCUL DI DESKTOP */
     }
 }
 
-.btn-white-custom:hover {
-    background-color: #10b981;
-    color: white;
-}
+/* --- HERO SECTION --- */
+.hero-container { max-width: 80rem; margin: auto; padding: 12rem 1.5rem 5rem; text-align: center; }
+.hero-title { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.1; letter-spacing: -0.05em; }
+.glow-effect { position: absolute; top: 5rem; left: 50%; transform: translateX(-50%); width: 300px; height: 400px; background: rgba(16, 185, 129, 0.1); border-radius: 50%; filter: blur(100px); z-index: -10; }
 
-/* --- GRID SYSTEMS --- */
-.features-grid-system {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 1.5rem;
-}
+/* --- CARDS & BOXES --- */
+.about-card-wrapper { background: rgba(15, 23, 42, 0.4); border-radius: 40px; padding: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); }
+.card-botak-style { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(16, 185, 129, 0.1); border-radius: 24px; transition: 0.3s; }
+.card-botak-style:hover { border-color: rgba(16, 185, 129, 0.4); transform: translateY(-5px); }
 
-@media (min-width: 768px) {
-    .features-grid-system {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
+/* --- STAT CARDS --- */
+.stat-card-botak { background: rgba(15, 23, 42, 0.6); padding: 2rem; text-align: center; border-radius: 24px; border: 1px solid rgba(16, 185, 129, 0.1); }
+.stat-highlight { border: 2px solid #10b981 !important; }
 
-.feat-item {
-    padding: 2.5rem;
-}
+/* --- CHECKLIST --- */
+.feature-checklist { display: flex; flex-direction: column; gap: 1rem; font-size: 10px; font-weight: 900; letter-spacing: 0.1em; color: #cbd5e1; }
+.check-item { display: flex; items-center; gap: 1rem; }
 
-.faq-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
+/* --- BUTTONS --- */
+.btn-primary-custom { background: #10b981; padding: 0.625rem 1.5rem; border-radius: 9999px; font-size: 10px; font-weight: 900; text-transform: uppercase; color: white; letter-spacing: 0.1em; text-decoration: none; transition: 0.3s; }
+.btn-primary-custom:hover { transform: scale(1.05); }
+.btn-white-custom { background: white; color: black; padding: 1.25rem 3rem; border-radius: 1rem; font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; text-decoration: none; transition: 0.3s; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); display: inline-block; width: 100%; }
+@media (min-width: 768px) { .btn-white-custom { width: auto; } }
+.btn-white-custom:hover { background: #10b981; color: white; }
+
+/* --- GRIDS --- */
+.features-grid-system { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 768px) { .features-grid-system { grid-template-columns: repeat(3, 1fr); } }
+.feat-item { padding: 2.5rem; }
+.faq-stack { display: flex; flex-direction: column; gap: 1.25rem; }
 
 /* --- FOOTER --- */
-.main-footer-botak {
-    background-color: black;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    text-align: center;
-    border-top: 1px solid #064e3b; /* emerald-950 */
-}
+.main-footer-botak { background: black; padding: 5rem 1.5rem; text-align: center; border-top: 1px solid #064e3b; }
+.footer-sub-text { font-size: 10px; color: #10b981; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4em; margin-bottom: 3rem; font-style: italic; }
+.footer-copy { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4em; opacity: 0.5; }
 
-.footer-sub-text {
-    font-size: 10px;
-    color: #10b981;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    margin-bottom: 3rem;
-    font-style: italic;
-}
-
-.footer-copy {
-    font-size: 10px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.4em;
-    opacity: 0.5;
-}
-
-/* --- MOBILE RESPONSIVENESS --- */
+/* --- ADDITIONAL MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero-container {
-        padding-top: 10rem;
-    }
-
-    .about-card-wrapper {
-        padding: 1.5rem;
-    }
+    .hero-container { padding-top: 10rem; }
+    .about-card-wrapper { padding: 1.5rem; }
 }
